@@ -1,0 +1,35 @@
+.wrapper {
+    min-width: 400px;
+    min-height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.payment-method {
+    direction: ltr;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    display: inline-block;
+}
+
+.no-border--bottom {
+    border-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.label {
+    display: inline-block;
+    width: 49%;
+}
+
+.content {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+.disclaimer {
+    font-size: 9px;
+}

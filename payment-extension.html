@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>Payment Types</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+            color: #999;
+        }
+
+        #status {
+            /* avoid an excessively wide status text */
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 400px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>-->
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+
+    <script src="payment.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <h3>Payment Methods</h3>
+    <div class="payment-method">
+        <div class="label">Visa</div>
+        <div class="content">4111111111111111</div>
+    </div>
+    <div class="payment-method">
+        <div class="label">MasterCard</div>
+        <div class="content">5555555555554444</div>
+    </div>
+    <div class="payment-method no-border--bottom">
+        <div class="label">American Express</div>
+        <div class="content">378282246310005</div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">Expiration Date must be a valid date in the future (use the mmyy format).</p>
+    </footer>
+</div>
+
+</body>
+</html>
+
